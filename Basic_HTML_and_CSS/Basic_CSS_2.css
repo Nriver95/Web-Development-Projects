@@ -1,0 +1,18 @@
+body{
+	font-family: Arial;
+	text-align: center;
+	color: purple;
+}
+p{
+	color:darkcyan;
+	background: lightgrey;
+	font-weight: bolder;
+	text-align: right;
+}
+.fav_class{
+	color: red;
+	font-size: 30px;
+	background-color: black;
+}
+
+/*this is a comment in my css code*/
