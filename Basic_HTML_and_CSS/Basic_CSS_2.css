@@ -14,5 +14,7 @@ p{
 	font-size: 30px;
 	background-color: black;
 }
-
+h2{
+	text-shadow: 2px 2px #ffD700;
+}
 /*this is a comment in my css code*/
