@@ -16,3 +16,9 @@ tr, td{
 	background-color: darkslategrey;
 	color: white;
 }
+
+.black-dragons{
+	color: #8B0000;
+	font-family: Copperplate,Copperplate Gothic Light,fantasy; 
+	font-weight: bold;
+}
