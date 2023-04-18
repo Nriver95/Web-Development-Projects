@@ -1,0 +1,26 @@
+body{
+	background-color:#834100 ;
+    color: #FFE4B3;
+
+
+}
+
+h1{
+	font-size: 50px;
+	font-family: serif, "Georgia";
+	-webkit-text-stroke: 2px black;
+}
+
+p{
+	font-size: 30px;
+	font-family:New Century Schoolbook, TeX Gyre Schola, serif;
+}
+.title{
+	font-size: 80px;
+	background-color: #806F52;
+	-webkit-text-stroke: 2px black;
+}
+ul{
+	font-size: 30px;
+	font-family: fantasy;
+}
