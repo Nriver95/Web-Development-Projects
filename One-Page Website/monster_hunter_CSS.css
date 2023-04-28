@@ -48,6 +48,10 @@ ul{
     margin-right: auto;
     margin-left: auto;
 }
+
+#home{
+    background: url(images/MonsterHunter.jpg) no-repeat 50% 50%;
+}
 /*-------------------------------------
     GALLERY SECTION ANIMATION
 -------------------------------------*/
@@ -71,6 +75,16 @@ ul{
     max-width: 100%;
     width: 1024px;
     height: 556px;
+}
+
+.top-centered{
+    font-size: 50px;
+    color:Red;
+    -webkit-text-stroke: 2px black;
+    outline: 2px;
+    position: absolute;
+    top: 10%;
+    left: 38%;
 }
 /*----------------------------------------
     CONTACT STYLES

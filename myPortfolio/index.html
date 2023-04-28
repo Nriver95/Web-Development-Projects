@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--Head-->
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width" />
+		<title>Basic HTML</title>
+        <link rel="stylesheet" type="text/css" href="css/portfolioCSS.css">
+	</head>
+	
+    <!--Body-->
+	<body class="background">
+
+        <!--Navbar-->
+        <div class="Navbar">
+            <a class="active" href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#GitHub">GitHub</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <!--Break between navbar and heading-->
+        <br>
+        <br>
+
+        <!--Background video-->
+        <div id="home">
+            <video autoplay muted loop id="nightSky">
+                <source src="images/video/nightSky.mp4" type="video/mp4">
+                <!--Display message if video fails-->
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+
+        <!--Video Text Overlay-->
+        <div class="videoTextOverlay">
+            <h1 class="whiteText">Nicholas Rivera's Portfolio</h1>
+            <strong>
+                <p class="center">
+                    The finished products of programming are like the night sky. When you look at the sky as a whole it's a sight to behold, much like a well designed webpage or program.<br>
+                    And when you look closely you can see that all the colors and shapes are individual stars and galaxies. The pure vastness and variety of stars and what it must have taken to get the beautiful picture that is the night sky can seem overwhelming.<br>
+                    But very star, like every line of code, has it's place no matter how small. Carefully making sure every line is in the right place is what I do, and I strive to make things that people can admire even momentarily in passing. One star at a time.
+                    <br>
+                    <br>I am Nick and this is my portfolio website.  I'll show you a little about my background and experience.
+                    <br>
+                    <br>Thank you for your time
+                </p>
+            </strong>
+        </div>
+
+        <!--About section-->
+        <div class="row" id="about">
+            <!--Left column-->
+            <div class="column_2">
+                <img src="images/espresso.jpg" alt="Cup of well made espresso with a rosetta leaf design on top.">
+            </div>
+            <!--Right column-->
+            <div>
+                <h1>About</h1>
+                <p>
+                    I'm a software developer and I think this work is a lot of fun. They say that if you love what you do it isn't work and that's how I feel about coding.
+                    <br>The tenacity that comes from being a 9 year Army National Guard veteran has helped me stay resilient with any challenges that I have and may face.
+                    <br>I am a graduate of <a href="https://https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>'s Software Development Bootcamp. I'm trained in HTML, CSS, JavaScript, SQL, C#, and more.
+                    <br>
+                    <br>I am a full-stack developer and am eager to work on any project you throw my way. <a href="#contact">Contact</a> me below for any questions or propositions you may have.
+                </p>
+            </div>
+        </div>
+
+	</body>
+</html> 
