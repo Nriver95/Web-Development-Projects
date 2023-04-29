@@ -1,0 +1,296 @@
+/*-----General Styling-----*/
+/* Body */
+body{
+    margin: 0% /*ensures site displays all the way to the edge of the browser screen*/
+}
+
+/* Heading 1 Elements */
+h1{
+    text-transform: uppercase;
+    font-weight: 750;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 3%;
+    color: white;
+    -webkit-text-stroke: 2px darkblue;
+}
+
+/* Heading 1 element hover effect */
+h1:hover{
+    filter: grayscale(5%);
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
+/* Styling for portfolio title text */
+.whiteText{
+    color: #fff;
+    -webkit-text-stroke: 2px darkblue;
+}
+
+/* Paragraph elements */
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    letter-spacing: 1px;
+    font-weight: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+}
+
+/* Paragraph element hover effect */
+p:hover{
+    -webkit-transition: color 5s;
+    transition: color 5s;
+    color: rgb(255, 90, 247);
+}
+
+/* center class */
+.center{
+    text-align: center;
+}
+
+/* center class hover effect-only for video text, github link, and footer */
+.center:hover{
+    transition: transform 2s;
+    transform: scale(1.1);
+}
+
+/*Anchor elements */
+a{
+    color: rgb(0, 204, 255);
+}
+
+/* Image elements */
+img{
+    filter: grayscale(75%);
+    border-radius: 8px;
+    max-width: 100%;
+    height: 340px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Image element hover effects */
+img:hover{
+    filter: grayscale(5%);
+    transition: transform 1s;
+    transform: scale(1.1);
+}
+
+/* @media rule is used in media queries to apply different styles for different media/types of devices */
+/* On screens 576px and smaller the images will be 100px tall and centered vertically in the column */
+@media screen and (max-width: 576){
+    img{
+        height: 100px;
+        margin-top: 150px;
+    }
+}
+
+/* Styling for footer element */
+footer{
+    padding: 2%;
+    background-color: white;
+}
+/*-----End of general styling -----*/
+
+/*-----Navbar styling-----*/
+.navbar{
+    overflow: hidden;
+    background-color: black;
+    position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
+    top: 0;
+    width: 100%;
+    z-index: 1; /* This ensures other elements don't display over the navbar */
+    -webkit-animation: moveNav 5s; /* This applies the moveNav animation below for safari 4.0-8.0 */
+    animation: moveNav 5s; /* This applies the moveNav animation for all other browsers */
+}
+
+/* moveNav animation effect for moving the nav bar in from of the left of the screen */
+@keyframes moveNav{
+    from {left: -100vw;} /* the navbar is starting off screen to the left */
+    to {left: 0vw;} /* This moves the navbar into place on the screen */
+}
+
+/* Navbar links */
+.navbar a{
+    float: left; /* This specifies that text floats on the left on the navbar */
+    display: block; /* This ensure that other text will be displayed on the same line or row */
+    color: white;
+    padding: 14px 16px; /* padding around text */
+    text-decoration: none; /* this gets rid of the underline under the text on the navbar */
+    font-family: Avant Garde, Helvetica;
+    font-size: 20px;
+    text-align: center;
+    position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below it */
+    -webkit-animation: moveNavText 5.75s; /* Animation for Safari 4.0-8.0 */
+    animation: moveNavText 5.75s; /* Applies the moveNavText animation for 5.75s */
+}
+
+/* MoveNavText animation effect for moving the navbar text from above the view to the navbar */
+@keyframes moveNavText{
+    from {top: -100vw;}
+    to {top: 0vw;}
+}
+
+/* Screens 576px and smaller will display navbar links equally distributed */
+@media screen and (max-width: 576px){
+    .navbar a{
+        width: 25%;
+        font-weight: 12px;
+    }
+}
+
+/* Navbar hover effects */
+.Navbar a:hover{
+    background-color: #f4f4f4; /* Defines the background color that will display when you hover over the link */
+    color: black; /* defines the font color that will display when navbar a elements are hovered over */
+    font-weight: bold; /*makes text on the navbar with the "active" class */
+}
+
+/* Navbar home button */
+.navbar a.active{ /* This targets the a element on the navbar with the "active" class */
+    background-color: darkgrey;
+}
+
+/*-----End of Navbar Styling -----*/
+
+/*----- Video Styling -----*/
+/* formatting for backgrounds video */
+#nightSky{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    z-index: -1;
+}
+
+/* for screens smaller than 578px */
+@media screen and (max-width: 576px){
+    #nightSky{
+        display: none;
+    }
+}
+
+/* text over the video */
+.videoTextOverlay{
+    background: rgba(0,0,0,0.5);
+    color: white;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    -webkit-animation: moveVideoText 5.75s;
+    animation: moveVideoText 5.75s;
+}
+
+/* This animation effect causes the overlay video text to move up from the vottom of the page upon page load */
+@keyframes moveVideoText{
+    from{top: -100vw;}
+    to{top: 0vw;}
+}/*-----End of vdieo styling -----*/
+
+/*----- Table styling - this section covers the styling of the columns and rows within the table -----*/
+* {/* The asterisk is a universal selector that applies this effect to all elements on the page*/
+    box-sizing: border-box; /* this creates a box with a border within which we will place most of our text */
+}
+
+.column_1{
+    float: left;
+    width: 50%;
+    padding: 10px;
+    padding-top: 3%;
+    height: 400px;
+    background-color: rgb(36, 36, 37);
+}
+
+/* screens 576px and smaller will display a scrool bar if the text overflows the column height */
+@media screen and (max-width: 576px){
+    .column_1{
+        overflow: auto;
+    }
+}
+
+.column_2{
+    float: left;
+    width: 50%;
+    padding: 10px;
+    padding-top: 1.9%;
+    height: 400px;
+    background-color: rgb(7, 18, 77);
+}
+
+/* this class is applied to the columns in the final row, overriding the height and padding to provide more room for the contact form while keeping the rest of the formatting from column_1 or column_2. */
+.column_tall{
+    padding-top: 3.5%;
+    height: 450px;
+}
+
+/* This inserts something after the content of selected elements (in this case the elements with class "Row") */
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+/*-----end of table styling-----*/
+
+/*----- contact form styling -----*/
+/* input[type=text] targets all text input sections of the contact form */
+input[type=text]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* hover effects for input boxes */
+label{
+    color: white;
+}
+input[type=text]:hover{
+    box-shadow: 0 0 5px #00004d inset;
+}
+
+/* submit button */
+input[type=submit]{
+    background-color: white;
+    color: #1a0346;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* hover effect for submit button */
+input[type=submit]:hover{
+    background-color: white;
+    color: black;
+    transform: scale(1.5);
+    transition: transform 1.5s;
+}
+
+/* form element */
+form{
+    border-radius: 5px;
+    background-color: #1a0346;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+/*----- end of contact form styling -----*/
+
+/*-----Footer background-----*/
+footer{
+    background-color: #1a0346;
+    color: white;
+}
