@@ -4,8 +4,10 @@
 		<title>Monster Hunter Fan Site</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" type="text/css" href="CSS/MH.css">
+		<script src="JS/MH.js" defer></script>
 	</head>
-	<body> <link rel="stylesheet" type="text/css" href="monster_hunter_CSS.css">
+	<body>
 
 		<!-- NAV -->
 			<nav>
@@ -134,7 +136,7 @@
 					<!-- PHOTO-CONTAINER 1 -->
 						<div class="photo">
 							<div class="photo-container">
-								<img src="images/KokotoVillage.png" alt="A village located in the middle of a green forest with houses primarily made of wood with dirt road throughout.">
+								<img src="images/KokotoVillage.png" alt="A village located in the middle of a green forest with houses primarily made of wood with dirt road throughout." onclick="openModal();currentSlide(1)" class="hover-shadow">
 							</div>
 							</div>
 						<div>
@@ -146,7 +148,7 @@
 					<!-- PHOTO-CONTAINER 2 -->
 						<div class="photo">
 							<div class="photo-container">
-								<img src="images/PokkeVillage.png" alt="A village located in a snowy mountain range.  The houses are made of wood with snow covered roofs.">
+								<img src="images/PokkeVillage.png" alt="A village located in a snowy mountain range.  The houses are made of wood with snow covered roofs." onclick="openModal();currentSlide(2)" class="hover-shadow">
 							</div>
 						</div>
 						<div>
@@ -158,7 +160,7 @@
 					<!-- PHOTO-CONTAINER 3 -->
 						<div class="photo">
 							<div class="photo-container">
-								<img src="images/MogaVillage.png" alt="Moga Village. A village primarily made up of docks and wooden houses floating on top of the water off the coast.">
+								<img src="images/MogaVillage.png" alt="Moga Village. A village primarily made up of docks and wooden houses floating on top of the water off the coast." onclick="openModal();currentSlide(3)" class="hover-shadow">
 							</div>
 						</div>
 						<div>
@@ -170,8 +172,10 @@
 					<!-- PHOTO-CONTAINER 4 -->
 						<div class="photo">
 							<div class="photo-container">
-								<img src="images/AsteraVillage.png" alt="A village made on the new world frontier made of giant ships repurposed into living quarters and facilities such as a black smith and a food hall.">
-								<img src="images/SelianaVillage.png" alt="A village made in much the same way as Astera Village but located in a distant island to the north primarily made up of frozen tundra.">
+								<img src="images/AsteraVillage.png" alt="A village made on the new world frontier made of giant ships repurposed into living quarters and facilities such as a black smith and a food hall." onclick="openModal();currentSlide(4)" class="hover-shadow">
+							</div>
+							<div class="photo-container">
+								<img src="images/SelianaVillage.png" alt="A village made in much the same way as Astera Village but located in a distant island to the north primarily made up of frozen tundra." onclick="openModal();currentSlide(5)" class="hover-shadow">
 							</div>
 						</div>
 						<div>
@@ -183,7 +187,7 @@
 					<!-- PHOTO-CONTAINER 5 -->
 						<div class="photo">
 							<div class="photo-container">
-								<img src="images/KamuraVillage.png" alt="A village modeled after historic japan with building made of wood and doors and windows made of paper.">
+								<img src="images/KamuraVillage.png" alt="A village modeled after historic japan with building made of wood and doors and windows made of paper." onclick="openModal();currentSlide(6)" class="hover-shadow">
 							</div>
 						</div>
 						<div>
@@ -197,7 +201,7 @@
 					<!-- PHOTO-CONTAINER 6 -->
 						<div class="photo">
 							<div class="photo-container">
-								<img src="images/Rathalos.png" alt="A red wyvern type dragon with black accents and breaths fire.  Surrounded by hunters.">
+								<img src="images/Rathalos.png" alt="A red wyvern type dragon with black accents and breaths fire.  Surrounded by hunters." onclick="openModal();currentSlide(7)" class="hover-shadow">
 								<div class="top-centered">The King Of The Skies</div>
 							</div>
 						</div>
@@ -212,7 +216,7 @@
 					<!-- PHOTO-CONTAINER 7 -->
 						<div class="photo">
 							<div class="photo-container">
-								<img src="images/Lagiacrus.png" alt="A blue and white aquatic leviathan with control over electricity.">
+								<img src="images/Lagiacrus.png" alt="A blue and white aquatic leviathan with control over electricity." onclick="openModal();currentSlide(8)" class="hover-shadow">
 							</div>
 						</div>
 						<div>
@@ -224,7 +228,7 @@
 					<!-- PHOTO-CONTAINER 8 -->
 						<div class="photo">
 							<div class="photo-container">
-								<img src="images/Diablos.png" alt="A tan Dinosaur like wyvern that resembles a triceritops with two prominent twisting horns protruding from it's face plating">
+								<img src="images/Diablos.png" alt="A tan Dinosaur like wyvern that resembles a triceritops with two prominent twisting horns protruding from it's face plating" onclick="openModal();currentSlide(9)" class="hover-shadow">
 							</div>
 						</div>
 						<div>
@@ -236,7 +240,7 @@
 					<!-- PHOTO-CONTAINER 9 -->
 						<div class="photo">
 							<div class="photo-container">
-								<img src="images/Nargacuga.png" alt="A black cat like wyvern with red accents between the wing blades and ears.">
+								<img src="images/Nargacuga.png" alt="A black cat like wyvern with red accents between the wing blades and ears." onclick="openModal();currentSlide(10)" class="hover-shadow">
 							</div>
 						</div>
 						<div>
@@ -249,6 +253,115 @@
 			</div>
 		</section>
 		<!-- END GALLERY -->
+
+		<!--The Modal/Lightbox-->
+		<div id="monsterModal" class="modal">
+			<span class="close cursor" onclick="closeModal()">&times;</span>
+			<div class="modal-content">
+
+				<div class="monsterSlides">
+					<div class="number-text">1 / 10</div>
+					<img src="images/KokotoVillage.png" style="width:100%">
+				</div>
+
+				<div class="monsterSlides">
+					<div class="number-text">2 / 10</div>
+					<img src="images/PokkeVillage.png" style="width:100%">
+				</div>
+
+				<div class="monsterSlides">
+					<div class="number-text">3 / 10</div>
+					<img src="images/MogaVillage.png" style="width:100%">
+				</div>
+
+				<div class="monsterSlides">
+					<div class="number-text">4 / 10</div>
+					<img src="images/AsteraVillage.png" style="width:100%">
+				</div>
+
+				<div class="monsterSlides">
+					<div class="number-text">5 / 10</div>
+					<img src="images/SelianaVillage.png" style="width:100%">
+				</div>
+
+				<div class="monsterSlides">
+					<div class="number-text">6 / 10</div>
+					<img src="images/KamuraVillage.png" style="width:100%">
+				</div>
+
+				<div class="monsterSlides">
+					<div class="number-text">7 / 10</div>
+					<img src="images/Rathalos.png" style="width:100%">
+				</div>
+
+				<div class="monsterSlides">
+					<div class="number-text">8 / 10</div>
+					<img src="images/Lagiacrus.png" style="width:100%">
+				</div>
+
+				<div class="monsterSlides">
+					<div class="number-text">9 / 10</div>
+					<img src="images/Diablos.png" style="width:100%">
+				</div>
+
+				<div class="monsterSlides">
+					<div class="number-text">10 / 10</div>
+					<img src="images/Nargacuga.png" style="width:100%">
+				</div>
+
+				<!--Next/Previous controls-->
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+				<!--Caption text-->
+				<div class="caption-container">
+					<p id="caption"></p>
+				</div>
+
+				<!--Thumbnail image controls-->
+				<div class="row">
+					<div class="column">
+						<img class="demo" src="images/thumbnails/KokotoThumb.png" onclick="currentSlide(1)" alt="Kokoto Village">
+					</div>
+
+					<div class="column">
+						<img class="demo" src="images/thumbnails/PokkeThumb.png" onclick="currentSlide(2)" alt="Pokke Village">
+					</div>
+
+					<div class="column">
+						<img class="demo" src="images/thumbnails/MogaThumb.png" onclick="currentSlide(3)" alt="Moga Village">
+					</div>
+
+					<div class="column">
+						<img class="demo" src="images/thumbnails/AsteraThumb.png" onclick="currentSlide(4)" alt="Astera">
+					</div>
+
+					<div class="column">
+						<img class="demo" src="images/thumbnails/SelianaThumb.png" onclick="currentSlide(5)" alt="Seliana">
+					</div>
+
+					<div class="column">
+						<img class="demo" src="images/thumbnails/KamuraThumb.png" onclick="currentSlide(6)" alt="Kamura Village">
+					</div>
+
+					<div class="column">
+						<img class="demo" src="images/thumbnails/RathalosThumb.png" onclick="currentSlide(7)" alt="Rathalos">
+					</div>
+
+					<div class="column">
+						<img class="demo" src="images/thumbnails/LagiacrusThumb.png" onclick="currentSlide(8)" alt="Lagiacrus">
+					</div>
+
+					<div class="column">
+						<img class="demo" src="images/thumbnails/DiablosThumb.png" onclick="currentSlide(9)" alt="Diablos">
+					</div>
+
+					<div class="column">
+						<img class="demo" src="images/thumbnails/NargacugaThumb.png" onclick="currentSlide(10)" alt="Nargacuga">
+					</div>
+				</div>
+			</div>
+		</div>
 
 	<!--RSVP-->
 	<section id="contact">
